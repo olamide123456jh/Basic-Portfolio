@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+body{
+  font-family: 'Roboto';
+  line-height:1.4;
+  background-color:rgba(228, 212, 74, 0.45);
+}
+
+.container1{
+  max-width: 960px;
+  margin:auto;
+  border-radius: 4px;
+  overflow: hidden;
+  padding: 0 3rem;
+  margin-top: -10px;
+  
+}
+
+.showcase{
+ 
+  color: rgb(20, 15, 15);
+  height: 100vh;
+  position: relative;
+  width: 100%;
+}
+
+.showcase-inner{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+}
+
+.showcase h1{
+    font-size: 4rem;
+}
+
+.showcase p{
+    font-size: 1.2rem;
+    margin-bottom: 35px;
+}
+
+.btn{
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    color: rgb(5, 5, 4);
+    border-radius: 3px;
+    letter-spacing: 1.9px;
+    background-color: rgb(235, 248, 45);
+    font-weight: 800;
+    box-shadow: 0px 0px 7px rgb(207, 194, 120);
+    padding: 10px 20px;
+    transition: opacity 200ms ease-in, font-size 200ms ease-out;
+}
+
+.btn:hover{
+    opacity: 0.7;
+    font-size: 17px;
+}
+
+.menu-wrap{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.menu-wrap .toggler{
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+}
+
+.menu-wrap .hamburger{
+    position: absolute;
+    top: 0;
+    left:0;
+    z-index: 1;
+    padding: 1rem;
+    width: 60px;
+    height: 60px;
+    background-color:rgba(228, 212, 74, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+}
+
+/*hamburger middle line */
+
+.menu-wrap .hamburger > div{
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(12, 12, 12);
+    transition: transform 0.4s ease;
+}
+/*Hamburger top and bottom line*/
+.menu-wrap .hamburger > div::before,
+.menu-wrap .hamburger > div::after{
+    content: "";
+    position: absolute;
+    top: -10px;
+    width: 100%;
+    height: 2px;
+    background-color: inherit;
+}
+/*moves line down*/
+.menu-wrap .hamburger > div::after{
+    top: 10px;
+}
+
+/*toggler animation*/
+.menu-wrap .toggler:checked + .hamburger>div{
+    transform: rotate(135deg);
+}
+
+/*turns line into X */
+.menu-wrap .toggler:checked + .hamburger>div::before,
+.menu-wrap .toggler:checked + .hamburger>div::after{
+    top: 0;
+    transform: rotate(90deg);
+}
+
+/* Rotate on hover when checked*/
+.menu-wrap .toggler:checked:hover + .hamburger>div{
+    transform: rotate(225deg);
+}
+
+/* Show Menu */
+.menu-wrap .toggler:checked ~ .menu{
+    visibility: visible;
+}
+
+.menu-wrap .toggler:checked ~ .menu> div{
+    transform: scale(1);
+    transition-duration: 0.5s;
+}
+
+.menu-wrap .toggler:checked ~ .menu> div > div{
+    opacity: 1;
+    transition: opacity 0.4s ease;
+}
+
+.menu-wrap .menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    visibility: hidden;
+    justify-content: center;
+}
+
+.menu-wrap .menu>div{
+    background-color: rgba(39, 39, 38, 0.8);
+    width: 200vw;
+    height: 200vw;
+    overflow: hidden;
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    flex: none;
+    transform: scale(0);
+    transition: all 0.4s ease;
+}
+
+.menu-wrap .menu > div > div{
+    max-width: 90vw;
+    max-height: 100vh;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.menu-wrap .menu > div > div > ul > li{
+    list-style: none;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.menu-wrap .menu > div > div > ul > li > a{
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.4s ease;
+}
+img{
+   height: 150px;
+   width: 150px;
+   border-radius: 50%;
+}
+h2{
+    font-family: sans-serif;
+    text-align: center;
+}
+/* ===== Google Font Import - Poppins ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/* body{
+    height: 100vh;
+    display: flex;
+    background: #4070f4;
+    align-items: center;
+    justify-content: center;
+} */
+.container{
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    /* background: #fff; */
+    margin: auto;
+    padding: 10px 20px;
+    border-radius: 7px;
+    margin-top: 100px;
+}
+.container .skill-box{
+    width: 100%;
+    margin: 25px 0;
+}
+.skill-box .title{
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+.skill-box .skill-bar{
+    height: 8px;
+    width: 100%;
+    border-radius: 6px;
+    margin-top: 6px;
+    background: rgba(0,0,0,0.1);
+}
+.skill-bar .skill-per{
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 90%;
+    border-radius: 6px;
+    background: #4070f4;
+    animation: progress 0.4s ease-in-out forwards;
+    opacity: 0;
+}
+.skill-per.css{
+    width: 70%;
+    animation-delay: 0.1s;
+}
+.skill-per.javascript{
+    width: 50%;
+    animation-delay: 0.2s;
+}
+.skill-per.nodejs{
+    width: 30%;
+    animation-delay: 0.3s;
+}
+@keyframes progress {
+    0%{
+        width: 0;
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.skill-per .tooltip{
+    position: absolute;
+    right: -14px;
+    top: -28px;
+    font-size: 9px;
+    font-weight: 500;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 3px;
+    background: #4070f4;
+    z-index: 1;
+}
+.tooltip::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    height: 10px;
+    width: 10px;
+    z-index: -1;
+    background-color: #4070f4;
+    transform: translateX(-50%) rotate(45deg);
+}
+.progress{
+    /* margin-top: 100px; */
+}
+.ib{
+    text-align: center;
+}
